@@ -16,5 +16,6 @@ Currently, two official plugins are available:
 
 ![p5](https://github.com/user-attachments/assets/4db82b49-6a5a-4f1b-a767-a13f524d5a41)
 
-![p4](https://github.com/user-attachments/assets/966277fc-d52d-404c-b598-d7c8cf15ae29)
+![p4](https://github.com/user-attachments/assets/abdc4121-a76d-421c-86cc-c7f1da0d7fc5)
+
 
