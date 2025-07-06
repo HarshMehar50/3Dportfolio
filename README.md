@@ -12,3 +12,4 @@ Currently, two official plugins are available:
 ![App Screenshot](./public/images/p3.png)
 ![App Screenshot](./public/images/p4.png)
 ![App Screenshot](./public/images/p5.png)
+![p2](https://github.com/user-attachments/assets/543596e8-065b-4515-ad4a-9447bc3ce289)
