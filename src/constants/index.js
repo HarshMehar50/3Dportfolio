@@ -29,15 +29,69 @@
      { text: "Code", imgPath: "/images/code.svg" },
  ];
 
+ // cfRating
+ async function fetchCodeforcesRating(username) {
+     const url = `https://codeforces.com/api/user.info?handles=${username}`;
+     try {
+         const res = await fetch(url);
+         const data = await res.json();
+         if (data.status === "OK") {
+             return data.result[0].rating;
+         }
+     } catch (e) {
+         console.error(e);
+     }
+     return 0;
+ }
+ const cfRating = await fetchCodeforcesRating("harshmehar50");
+
+ // cfQuestions
+ async function getCodeforcesSolvedCount(username) {
+     const url = `https://codeforces.com/api/user.status?handle=${username}`;
+     try {
+         const res = await fetch(url);
+         const data = await res.json();
+         if (data.status !== "OK") return 0;
+
+         const solved = new Set();
+
+         for (const sub of data.result) {
+             if (sub.verdict === "OK") {
+                 const problemId = `${sub.problem.contestId}-${sub.problem.index}`;
+                 solved.add(problemId);
+             }
+         }
+
+         return solved.size;
+     } catch (err) {
+         console.error(err);
+         return 0;
+     }
+ }
+
+ const solved = await getCodeforcesSolvedCount("harshmehar50");
+
+ // lcquestions
+ async function getLeetCodeStats(username) {
+     const res = await fetch(`https://leetcode-stats-api.herokuapp.com/${username}`);
+     const data = await res.json();
+     return data.totalSolved;
+ }
+ const lcsolvedquestions = await getLeetCodeStats("altharsh");
+
+
  const counterItems = [
-     { value: 400, suffix: "+", imgPath: "/images/leetcode.png", link: "https://leetcode.com/u/harsh4955/", label: "LeetCode Questions" },
-     { value: 100, suffix: "+", imgPath: "/images/codeforces.png", link: "https://codeforces.com/profile/harshmehar50", label: "CodeForces Questions" },
-     { value: 2, suffix: "+", label: "Completed Projects" },
-     { value: 40, suffix: "+", imgPath: "/images/codechef.png", link: "https://www.codechef.com/users/altharsh49", label: "CodeChef Questions" },
+
+     { value: lcsolvedquestions, suffix: "+", imgPath: "/images/leetcode.png", link: "https://leetcode.com/u/altharsh/", label: "LeetCode Questions" },
+     { value: 1817, imgPath: "/images/leetcode.png", link: "https://leetcode.com/u/altharsh/", label: "LeetCode Rating" },
+     { value: solved, suffix: "+", imgPath: "/images/codeforces.png", link: "https://codeforces.com/profile/harshmehar50", label: "CodeForces Questions" },
+     { value: cfRating, imgPath: "/images/codeforces.png", link: "https://codeforces.com/profile/harshmehar50", label: "CodeForces Rating" },
+     { value: 70, suffix : "+" , imgPath: "/images/codechef.png", link: "https://www.codechef.com/users/altharsh49", label: "CodeChef Questions" },
+     { value: 1585 , imgPath: "/images/codechef.png", link: "https://www.codechef.com/users/altharsh49", label: "CodeChef Rating" },
+     { value: 3, suffix: "+", label: "Completed Projects" },
  ];
 
- 
-         
+      
 
  const abilities = [
      {
@@ -119,16 +173,7 @@
          url: "https://www.instagram.com/harsh_mehar_49",
          imgPath: "/images/insta.png",
      },
-     /*{
-         name: "fb",
-         url: "https://www.facebook.com/",
-         imgPath: "/images/fb.png",
-     },
-     {
-         name: "x",
-         url: "https://www.x.com/",
-         imgPath: "/images/x.png",
-     },*/
+    
      {
          name: "linkedin",
          url: "https://www.linkedin.com/in/harsh-mehar-010853288",
@@ -150,3 +195,4 @@
      techStackImgs,
      navLinks,
  };
+
