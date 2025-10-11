@@ -26,14 +26,16 @@ const ShowcaseSection = () => {
                 <div className={"showcaselayout"}>
                     <div className={"first-project-wrapper"} ref={project1Ref}>
                         <div className={"image-wrapper"}>
-                            <a href="https://github.com/HarshMehar50/weather-forecast-app" target="_blank" rel="noopener noreferrer">
-                                <img src={"/images/wapp.png"} alt={"weather&forecast"}/>
+                            <a href="https://github.com/HarshMehar50/Zentry-Landing-page.git" target="_blank" rel="noopener noreferrer">
+                                <img src={"/images/zentry.png"} alt={"Zentry Landing page"}/>
                             </a>
                         </div>
                         <div className={"text-content"}>
-                            <h2>An API powered dynamic project to see the weather and forecast of desired location</h2>
+                            <h2>Built to replicate its sleek design, animations, and modern user interface.</h2>
                             <p className={"text-white-50 md:text-xl"}>
-                                It is a fully functional frontend project made by using tech stacks like HTML , CSS , JavaScript
+                                It focuses on responsive layouts, smooth transitions, and pixel-perfect styling to closely match the original. It demonstrates the
+                                use of clean code structure, performance optimization, and attention to UI/UX details to deliver a seamless browsing
+                                experience similar to the original Zentry website.
                             </p>
                         </div>
                     </div>
@@ -45,7 +47,17 @@ const ShowcaseSection = () => {
                                 </a>
                             </div>
                             <h2>3D portfolio</h2>
-                            <p className={"text-white-50 md:text-xl"}>A website made with React Native to track my progress</p>
+                            <p className={"text-white-50 md:text-xl"}>A React Native website to track my overall progress in DSA, CP and Development</p>
+                        </div>
+
+                        <div className={"project"} ref={project2Ref}>
+                            <div className={"image-wrapper bg-[#ffefdb]"}>
+                                <a href="https://github.com/HarshMehar50/weather-forecast-app" target="_blank" rel="noopener noreferrer">
+                                    <img src={"/images/wapp.png"} alt={"weather&forecast"}/>
+                                </a>
+                            </div>
+                            <h2>Weather&Forecast App</h2>
+                            <p className={"text-white-50 md:text-xl"}>An API powered dynamic project to see the weather and forecast of desired location</p>
                         </div>
 
 
@@ -56,3 +68,4 @@ const ShowcaseSection = () => {
     )
 }
 export default ShowcaseSection
+
