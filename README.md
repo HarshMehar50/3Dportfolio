@@ -23,25 +23,25 @@ It features live coding stats, interactive 3D models, and sleek UI animations in
 
 ```
 3Dportfolio/
-├── public/                  # Static assets
-│   ├── images/              # Image assets
-│   │   ├── logos/           # technology logos
-│   │   └── textures/        # Texture images for 3D models
-│   └── models/              # 3D model files
-├── src/                     # Source code
-│   ├── components/          # Reusable components
-│   │   ├── HeroModels/      # 3D models for hero section
-│   │   └── Models/          # General 3D models
-│   │       └── TechLogos/   # Technology logo models
-│   ├── constants/           # Constants and static data
-│   ├── sections/            # Main page sections
-│   ├── services/            # Service functions
-│   ├── App.jsx              # Main App component
-│   ├── index.css            # Global styles
-│   └── main.jsx             # Entry point
-├── index.html               # HTML entry point
-├── package.json             # Project dependencies and scripts
-└── vite.config.js           # Vite configuration
+├── public/                  
+│   ├── images/              
+│   │   ├── logos/           
+│   │   └── textures/        
+│   └── models/              
+├── src/                     
+│   ├── components/          
+│   │   ├── HeroModels/      
+│   │   └── Models/          
+│   │       └── TechLogos/   
+│   ├── constants/          
+│   ├── sections/            
+│   ├── services/            
+│   ├── App.jsx              
+│   ├── index.css           
+│   └── main.jsx             
+├── index.html              
+├── package.json             
+└── vite.config.js           
 ```
 
 ## Features
