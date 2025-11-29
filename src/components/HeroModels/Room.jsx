@@ -47,10 +47,10 @@ export function Room(props) {
             <EffectComposer>
                 <SelectiveBloom
                     selection={screensRef}
-                    intensity={1.5} // Strength of the bloom
-                    luminanceThreshold={0.2} // Minimum luminance needed
-                    luminanceSmoothing={0.9} // Smooth transition
-                    blendFunction={BlendFunction.ADD} // How it blends
+                    intensity={1.5} 
+                    luminanceThreshold={0.2} 
+                    luminanceSmoothing={0.9} 
+                    blendFunction={BlendFunction.ADD}
                 />
             </EffectComposer>
             <mesh
@@ -173,5 +173,6 @@ export function Room(props) {
         </group>
     );
 }
+
 
 useGLTF.preload("/models/optimized-room.glb");
